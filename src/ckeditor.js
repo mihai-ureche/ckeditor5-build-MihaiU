@@ -29,6 +29,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -56,7 +57,9 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	SimpleUploadAdapter
+	
 ];
 
 // Editor configuration.
@@ -68,6 +71,7 @@ ClassicEditor.defaultConfig = {
 			'alignment',
 			'bold',
 			'italic',
+			'|',
 			'link',
 			'bulletedList',
 			'numberedList',
